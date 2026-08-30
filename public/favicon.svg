@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="AT favicon">
+  <rect width="64" height="64" rx="18" fill="#ffffff"/>
+  <circle cx="18" cy="18" r="7" fill="#4285F4"/>
+  <circle cx="46" cy="18" r="7" fill="#EA4335"/>
+  <circle cx="18" cy="46" r="7" fill="#FBBC05"/>
+  <circle cx="46" cy="46" r="7" fill="#34A853"/>
+  <path d="M24 38h16l-8-18-8 18Zm5-4 3-7 3 7h-6Z" fill="#202124"/>
+</svg>
