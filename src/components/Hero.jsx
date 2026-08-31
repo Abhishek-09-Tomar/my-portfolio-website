@@ -14,7 +14,7 @@ export default function Hero () {
       id='home'
       className='relative overflow-hidden pt-28 sm:pt-32 lg:pt-36'
     >
-      <div className='absolute left-1/2 top-24 -z-10 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-950/40' />
+      <div className='absolute left-1/2 top-24 -z-10 h-136 w-136 -translate-x-1/2 rounded-full bg-blue-100/60 blur-3xl dark:bg-blue-950/40' />
       <div className='absolute right-0 top-48 -z-10 h-64 w-64 rounded-full bg-green-100/70 blur-3xl dark:bg-green-950/30' />
 
       <div className='section-shell grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]'>
@@ -91,14 +91,14 @@ export default function Hero () {
 
         <div className='relative mx-auto w-full max-w-md lg:max-w-lg'>
           <div className='float-slow material-card relative overflow-hidden p-5 sm:p-7'>
-            <div className='absolute inset-x-0 top-0 h-2 bg-gradient-to-r from-google-blue via-google-red to-google-green' />
+            <div className='absolute inset-x-0 top-0 h-2 bg-linear-to-r from-google-blue via-google-red to-google-green' />
             <img
               src='/profile-card.svg'
               alt='Abhishek Tomar profile illustration'
-              className='aspect-square w-full rounded-[1.5rem] object-cover'
+              className='aspect-square w-full rounded-3xl object-cover'
               loading='eager'
             />
-            <div className='mt-5 rounded-[1.5rem] bg-slate-50 p-5 dark:bg-slate-900'>
+            <div className='mt-5 rounded-3xl bg-slate-50 p-5 dark:bg-slate-900'>
               <div className='flex items-center gap-2 text-sm font-semibold text-google-blue'>
                 <Sparkles size={17} aria-hidden='true' /> Internship-ready
                 profile
