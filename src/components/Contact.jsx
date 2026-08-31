@@ -28,13 +28,37 @@ const contactItems = [
 
 export default function Contact () {
   const [status, setStatus] = useState('')
+  const [isSubmitting, setIsSubmitting] = useState(false)
 
-  const handleSubmit = event => {
+  const handleSubmit = async event => {
     event.preventDefault()
-    setStatus(
-      'Thanks! This form is ready to connect with Formspree, EmailJS, or your backend API.'
-    )
-    event.currentTarget.reset()
+    setIsSubmitting(true)
+    setStatus('Sending...')
+
+    const form = event.currentTarget
+    const formData = new FormData(form)
+    formData.append('access_key', '2433e3f3-7a25-4eff-a57a-ccef48a83e26')
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData
+      })
+
+      const data = await response.json()
+
+      if (data.success) {
+        setStatus('Thank you for reaching out! Your message has been sent.')
+        form.reset()
+      } else {
+        setStatus(`Error: ${data.message || 'Something went wrong.'}`)
+      }
+    } catch (error) {
+      console.error('Form submission error:', error)
+      setStatus('Something went wrong. Please try again or email me directly.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -89,8 +113,13 @@ export default function Contact () {
             />
           </label>
 
-          <button type='submit' className='primary-button mt-6'>
-            Send Message <Send size={17} aria-hidden='true' />
+          <button
+            type='submit'
+            disabled={isSubmitting}
+            className='primary-button mt-6 disabled:opacity-50'
+          >
+            {isSubmitting ? 'Sending...' : 'Send Message'}{' '}
+            <Send size={17} aria-hidden='true' />
           </button>
 
           {status && (
