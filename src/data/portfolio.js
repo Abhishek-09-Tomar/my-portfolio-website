@@ -21,7 +21,7 @@ export const personal = {
   education: 'B.Tech CSE, Galgotias University',
   graduation: 'July 2027',
   targetRole: 'Software Engineering Intern, Summer 2027',
-  email: 'abhishek9720086@gmail.com',
+  email: 'abhishektomar972008695@gmail.com',
   github: 'https://github.com/Abhishek-09-Tomar',
   githubUsername: 'Abhishek-09-Tomar',
   linkedin: 'https://www.linkedin.com/in/abhishek-tomar-7aa29127b/',
