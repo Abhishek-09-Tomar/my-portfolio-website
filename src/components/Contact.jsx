@@ -48,7 +48,9 @@ export default function Contact () {
       const data = await response.json()
 
       if (data.success) {
-        setStatus('Thank you for reaching out! Your message has been sent.')
+        setStatus(
+          "Message sent successfully! I'll reply to your email shortly."
+        )
         form.reset()
       } else {
         setStatus(`Error: ${data.message || 'Something went wrong.'}`)
