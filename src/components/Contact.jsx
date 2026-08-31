@@ -49,7 +49,7 @@ export default function Contact () {
 
       if (data.success) {
         setStatus(
-          "Message sent successfully! I'll reply to your email shortly."
+          'Thank you for your message! I will get back to you as soon as possible.'
         )
         form.reset()
       } else {
